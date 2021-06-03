@@ -1,0 +1,80 @@
+@use '../01_settings/variables' as var;
+@use '../02_tools/mixins' as mx;
+
+.main-header {
+    @include mx.f-justify;
+    position: relative;
+
+    @at-root {
+
+        .logo__img {
+            // max-width: var.$svg-width;
+            width: 24px;
+        }
+        
+        .trick {
+            opacity: 0;
+            background-color: #fff;
+            position: absolute;
+            right: 26px;
+            top: 25px;
+            width: 30px;
+            height: 30px;
+            border: 1px solid black;
+            z-index: 4;
+          }
+          .fa-bars {
+            font-size: 30px;
+            color: black;
+            position: absolute;
+            right: 26px;
+            opacity: 1;
+            z-index: 1;
+          }
+      
+          .fa-times {
+            position: absolute;
+            font-size: 30px;
+            right: 26px;
+            opacity: 0;
+          }        
+        .main-nav{
+            background-color: #0000EC;
+            position: absolute;
+            top: -1200%;
+            left: 0;
+            width: 100%;
+            height: calc(100vh - 54px);
+            padding: 1em;
+            z-index: 1;
+            transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+        }
+        .checkbox {
+            display: none;
+        }
+        .checkbox:checked ~ .main-nav {
+            top: 100%;
+        }
+      
+        .checkbox:checked ~ .fa-bars {
+            opacity: 0;
+        }
+      
+        .checkbox:checked ~ .fa-times {
+            opacity: 1;
+        }
+        .main-nav__container{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            height: 60px;
+            padding: var.$rwd-spacing var.$rwd-spacing; //previous css
+        }
+        .main-nav__link{
+            color: #FFFFFF;
+            font-size: 16px;
+        }               
+    }
+}
+

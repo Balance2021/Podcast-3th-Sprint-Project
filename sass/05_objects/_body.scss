@@ -1,0 +1,8 @@
+@use '../01_settings/variables' as var;
+
+.body {
+    max-width: var.$max-width;
+    margin-left: auto;
+    margin-right: auto;
+}
+

@@ -1,0 +1,28 @@
+@use '../01_settings/variables' as var;
+@use '../02_tools/mixins' as mx;
+
+.episodes {
+
+    background: var.$color-sections;
+    clip-path: var.$polygon-s;
+
+    @at-root {
+
+        .episodes__container {
+            @include mx.g-container-responsive(repeat(auto-fill, minmax(280px, 400px)));
+            justify-content: center;
+        }
+
+        .episodes__title {
+            color: var.$text-color-inverted;
+        }
+    
+        .episodes__song {
+            min-height: 380px;
+            width: 100%;
+            border-radius: var.$radius;
+        }
+    }
+
+}
+

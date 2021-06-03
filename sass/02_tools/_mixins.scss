@@ -1,0 +1,31 @@
+@use '../01_settings/variables' as var;
+
+// f = flex
+//g = grid
+
+@mixin f-justify ($align-items: center) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: $align-items;
+}
+
+@mixin f-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin g-container-responsive ($g-template: repeat(auto-fit, minmax(280px, 380px))) {
+    display: grid;
+    grid-template-columns: $g-template;
+    gap: var.$spacing-m;
+}
+
+@mixin transitions ($time: 1s) {
+    transition: all $time cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@mixin container-height ($height: 40vh){
+    height: $height;
+}

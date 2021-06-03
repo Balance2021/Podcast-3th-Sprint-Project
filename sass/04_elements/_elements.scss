@@ -1,0 +1,43 @@
+@use '../01_settings/variables' as var;
+
+body {
+    font-family: var.$font-family-text;
+    font-size: var.$fs-text;
+    color: var.$text-color;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var.$font-family-title;
+    color: var.$title-color;
+}
+
+h1 {
+    font-size: var.$fs-title-l;
+}
+
+h2 {
+    font-size: var.$fs-title-m;
+}
+
+h3 {
+    font-size: var.$fs-title-s;
+}
+
+a {
+    cursor: pointer;
+    font-size: var.$fs-link;
+}
+
+a:hover {
+    color: var.$hover-text;
+}
+
+button {
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+}

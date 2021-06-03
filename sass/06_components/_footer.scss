@@ -1,0 +1,30 @@
+@use '../01_settings/variables' as var;
+@use '../02_tools/mixins' as mx;
+
+.main-footer {
+    @include mx.g-container-responsive;
+
+    justify-content: center;
+
+    @at-root {
+        .copyright__text {
+            text-align: center;
+            padding-bottom: var.$padding-bottom;
+        }
+
+        .social {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .social__link {
+            transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+            
+        }
+        .fab {
+            font-size: var.$fs-title-s;
+            color: black;
+        }
+    }
+}

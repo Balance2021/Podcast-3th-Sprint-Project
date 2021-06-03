@@ -1,0 +1,71 @@
+@use '../01_settings/variables' as var;
+@use '../02_tools/mixins' as mx;
+
+
+@media screen and (min-width: 905px) {    
+    .logo__img{
+        width: 36px;
+    }    
+
+    .fa-bars{
+        display: none;
+    }
+    
+    .main-nav {
+        width: auto;
+        height: auto;
+        position: initial;
+        background-color: transparent;
+    }
+
+    .main-nav__menu {
+        display: flex;
+        justify-content: flex-end;
+        height: auto;
+    }
+
+    .main-nav__container {//main header link container
+        @include mx.f-center;
+        padding: 0 2vw;
+    }
+    .main-nav__link{
+        color: #060A24;
+    }
+    .line-cross:hover{
+        color: #00F3BB;
+        text-decoration: line-through;
+    }
+    .line-cross:active{
+        color:gray;
+        text-decoration: line-through;
+    }
+
+
+   //other components
+
+    .episodes {
+        clip-path: var.$polygon-m;
+    }
+
+    .last-news {
+        clip-path: var.$polygon-variant-xxl;
+    }
+
+    .main-footer {
+        justify-content: space-between;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .episodes {
+        clip-path: var.$polygon-l;
+        padding-top: 20vh;
+    }
+
+    
+    .last-news {
+        clip-path: var.$polygon-variant-xxxl;
+        padding: var.$rwd-spacing-xxl;
+    }
+}
+

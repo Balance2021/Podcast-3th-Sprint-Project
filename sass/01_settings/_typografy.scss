@@ -1,0 +1,16 @@
+$font-family-title: 'IBM Plex Sans', sans-serif;
+$font-family-text : 'IBM Plex Mono', monospace;
+
+$_fs-24: calc(22px + 1vw);
+$_fs-20: calc(18px + 1vw);
+$_fs-18: calc(14px + 1vw);
+$_fs-14: calc(10px + .8vw);
+$_fs-12: calc(8px + .6vw);
+
+
+$fs-title-l: $_fs-24;
+$fs-title-m: $_fs-20;
+$fs-title-s: $_fs-18;
+$fs-text: $_fs-14;
+$fs-menu: $_fs-14;
+$fs-link: $_fs-12;

@@ -1,0 +1,15 @@
+@use '../01_settings/variables' as var;
+@use '../02_tools/mixins' as mx;
+
+.last-news {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: var.$color-sections;
+    clip-path: var.$polygon-variant-xl;
+
+    &__title {
+        color: var.$text-color-inverted;
+    }
+}

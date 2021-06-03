@@ -1,0 +1,22 @@
+@use '../01_settings/variables' as var;
+
+.main-header,
+.main-footer {
+    padding: var.$rwd-spacing;
+}
+
+.hero,
+.guest__title,
+.history,
+.topics
+{
+    padding: var.$rwd-spacing-m;
+}
+
+.episodes {
+    padding: var.$rwd-spacing-xl 25vh;
+}
+
+.last-news  {
+    padding: var.$rwd-spacing-xl;
+}

@@ -1,0 +1,23 @@
+@use "sass:color";
+
+//Private variables
+$a-white: #f1f1f1;
+$_dark-blue: #363A4F;
+$_gray-blue: #525567;
+
+$_dark-sky : #0000EC;
+$_grass-green: #00F3BB;
+$_blue-hour: linear-gradient(to bottom, #0000ec 0%,#2b2bff 100%);
+$_green-blue:  linear-gradient(to right, #00f3bb 0%,#0000ec 100%);
+
+//Public variables
+
+$color-sections: $_blue-hour;
+
+$buttons: $_grass-green;
+$hover-buttons: $_green-blue;
+
+$title-color: $_dark-blue;
+$text-color: $_gray-blue;
+$text-color-inverted: $a-white;
+$hover-text: $_dark-sky;

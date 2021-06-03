@@ -1,0 +1,381 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+}
+
+body {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: calc(10px + .8vw);
+  color: #525567;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "IBM Plex Sans", sans-serif;
+  color: #363A4F;
+}
+
+h1 {
+  font-size: calc(22px + 1vw);
+}
+
+h2 {
+  font-size: calc(18px + 1vw);
+}
+
+h3 {
+  font-size: calc(14px + 1vw);
+}
+
+a {
+  cursor: pointer;
+  font-size: calc(8px + .6vw);
+}
+
+a:hover {
+  color: #0000EC;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+}
+
+.body {
+  max-width: 144rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main-header,
+.main-footer {
+  padding: 2vh 6vw;
+}
+
+.hero,
+.guest__title,
+.history,
+.topics {
+  padding: 4vh 6vw;
+}
+
+.episodes {
+  padding: 10vh 6vw 25vh;
+}
+
+.last-news {
+  padding: 10vh 6vw;
+}
+
+.a-hero__button,
+.a-last-news__button {
+  background: #00F3BB;
+  padding: 0.5em 2em;
+}
+
+.a-hero__button:hover, .a-hero__button:focus,
+.a-last-news__button:hover,
+.a-last-news__button:focus {
+  background: linear-gradient(to right, #00f3bb 0%, #0000ec 100%);
+  color: #FFFFFF;
+}
+
+.a-hero__button,
+.a-last-news__button {
+  width: 288px;
+  height: 48px;
+  text-align: center;
+}
+
+@media screen and (min-width: 900px) {
+  .a-hero__button {
+    width: 226px;
+    height: 56px;
+  }
+
+  .a-last-news__button {
+    width: 345px;
+    height: 56px;
+  }
+}
+.main-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.logo__img {
+  width: 24px;
+}
+
+.trick {
+  opacity: 0;
+  background-color: #fff;
+  position: absolute;
+  right: 26px;
+  top: 25px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
+  z-index: 4;
+}
+
+.fa-bars {
+  font-size: 30px;
+  color: black;
+  position: absolute;
+  right: 26px;
+  opacity: 1;
+  z-index: 1;
+}
+
+.fa-times {
+  position: absolute;
+  font-size: 30px;
+  right: 26px;
+  opacity: 0;
+}
+
+.main-nav {
+  background-color: #0000EC;
+  position: absolute;
+  top: -1200%;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 54px);
+  padding: 1em;
+  z-index: 1;
+  transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.checkbox {
+  display: none;
+}
+
+.checkbox:checked ~ .main-nav {
+  top: 100%;
+}
+
+.checkbox:checked ~ .fa-bars {
+  opacity: 0;
+}
+
+.checkbox:checked ~ .fa-times {
+  opacity: 1;
+}
+
+.main-nav__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 60px;
+  padding: 2vh 6vw 2vh 6vw;
+}
+
+.main-nav__link {
+  color: #FFFFFF;
+  font-size: 16px;
+}
+
+.hero__text {
+  max-width: 60ch;
+}
+
+.episodes {
+  background: linear-gradient(to bottom, #0000ec 0%, #2b2bff 100%);
+  -webkit-clip-path: polygon(0 2%, 100% 0, 100% 98%, 0% 100%);
+          clip-path: polygon(0 2%, 100% 0, 100% 98%, 0% 100%);
+}
+.episodes__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 400px));
+  gap: 2em;
+  justify-content: center;
+}
+
+.episodes__title {
+  color: #f1f1f1;
+}
+
+.episodes__song {
+  min-height: 380px;
+  width: 100%;
+  border-radius: 1em;
+}
+
+.history {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 380px));
+  gap: 2em;
+  justify-content: space-evenly;
+}
+.history__img {
+  margin-top: -20vh;
+  z-index: 1;
+}
+
+.guest__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 426px));
+  gap: 2em;
+  justify-content: center;
+  gap: 0;
+}
+
+.topics__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 240px));
+  gap: 2em;
+  justify-content: center;
+  justify-items: center;
+}
+.topics__subcontainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: start;
+  text-align: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+
+.last-news {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(to bottom, #0000ec 0%, #2b2bff 100%);
+  -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+}
+.last-news__title {
+  color: #f1f1f1;
+}
+
+.main-footer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 380px));
+  gap: 2em;
+  justify-content: center;
+}
+.copyright__text {
+  text-align: center;
+  padding-bottom: 1em;
+}
+
+.social {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.social__link {
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.fab {
+  font-size: calc(14px + 1vw);
+  color: black;
+}
+
+@media screen and (min-width: 905px) {
+  .logo__img {
+    width: 36px;
+  }
+
+  .fa-bars {
+    display: none;
+  }
+
+  .main-nav {
+    width: auto;
+    height: auto;
+    position: initial;
+    background-color: transparent;
+  }
+
+  .main-nav__menu {
+    display: flex;
+    justify-content: flex-end;
+    height: auto;
+  }
+
+  .main-nav__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2vw;
+  }
+
+  .main-nav__link {
+    color: #060A24;
+  }
+
+  .line-cross:hover {
+    color: #00F3BB;
+    text-decoration: line-through;
+  }
+
+  .line-cross:active {
+    color: gray;
+    text-decoration: line-through;
+  }
+
+  .episodes {
+    -webkit-clip-path: polygon(0 5%, 100% 0, 100% 95%, 0% 100%);
+            clip-path: polygon(0 5%, 100% 0, 100% 95%, 0% 100%);
+  }
+
+  .last-news {
+    -webkit-clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
+            clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  .main-footer {
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .episodes {
+    -webkit-clip-path: polygon(0 10%, 100% 0, 100% 90%, 0% 100%);
+            clip-path: polygon(0 10%, 100% 0, 100% 90%, 0% 100%);
+    padding-top: 20vh;
+  }
+
+  .last-news {
+    -webkit-clip-path: polygon(0 25%, 100% 0, 100% 100%, 0% 100%);
+            clip-path: polygon(0 25%, 100% 0, 100% 100%, 0% 100%);
+    padding: 20vh 6vw;
+  }
+}

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ES">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&family=IBM+Plex+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./styles/styles.css">
+    <title>Podcast</title>
+</head>
+
+<body class="body">
+
+    <header class="main-header">
+    
+        <div class="logo">
+            <img src="./assets/logo.svg" alt="logo" class="logo__img">
+        </div>
+
+        <label for="checkbox" class="main-header__hamburguer">
+            <span class="trick"></span>
+        </label>
+
+        <input type="checkbox" name="checkbox" id="checkbox" class="checkbox">
+
+        <i class="fa fa-bars"></i>
+        <i class="fas fa-times" id="close-icon"></i>
+
+
+             
+
+        <nav class="main-nav">
+            <ul class="main-nav__menu">
+                <li class="main-nav__container"><a href="#episodes" class="main-nav__link line-cross">EPISODIOS</a></li>
+                <li class="main-nav__container"><a href="#history" class="main-nav__link line-cross">NOSOTROS</a></li>
+                <li class="main-nav__container"><a href="#guests" class="main-nav__link line-cross">ENTREVISTAS</a></li>
+                <li class="main-nav__container"><a href="#topics" class="main-nav__link line-cross">TOPICOS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+
+        <article class="hero" id="hero">
+            <h1 class="hero__title">Hello <strike class="cross-out">world</strike> pale blue dot.</h1>
+            <p class="hero__text">Un podcast que explora el mundo de la programación. Nuevos episodios, todos los jueves cada 15 días.</p>
+            <button type="button" class="a-hero__button" id="know-more">CONOCE MÁS</button>
+        </article>
+
+        <article class="episodes" id="episodes">
+            <h2 class="episodes__title">Episodios</h2>
+            <section class="episodes__container">
+
+                <iframe src="https://open.spotify.com/embed/track/7fTuTTMgVe2RzKRFCFGBR2" class="episodes__song"></iframe>
+
+                <iframe src="https://open.spotify.com/embed/track/4heQqGOQPHQmdRwScd9k3J" class="episodes__song"></iframe>
+
+                <iframe src="https://open.spotify.com/embed/track/4hBOT6vEJEAkxYFZxc7mT5" class="episodes__song"></iframe>
+
+                <iframe src="https://open.spotify.com/embed/track/2LfNcRDDiNYWVFIhDlS2dB" class="episodes__song"></iframe>
+            </section>
+        </article>
+
+        <article class="history" id="history">
+            <img src="assets/phone.png" alt="phone" title="phone" class="history__img">
+            <section class="history__container">
+                <h2 class="history__title">De donde venimos</h2>
+                <p class="history__text">Our posturings, our imagined self-importance, the delusion that we have some privileged position in the Universe, are challenged by this point of pale light. 
+                    Our planet is a lonely speck in the great enveloping cosmic dark. In our obscurity, in all this vastness, there is no hint that help will come from elsewhere to save us from ourselves.</p>
+            </section>
+        </article>
+
+        <article class="guests" id="guests">
+            <h2 class="guest__title">Invitados/as estelares</h2>
+
+            <section class="guest__container">
+
+                <img src="assets/guest1.png" alt="guest" class="guests__img">
+                <img src="assets/guest2.png" alt="guest" class="guests__img">
+                <img src="assets/guest3.png" alt="guest" class="guests__img">
+                <img src="./assets/guest4.png" alt="guest" class="guests__img">
+                <img src="./assets/guest5.png" alt="guest" class="guests__img">
+                <img src="./assets/guest6.png" alt="guest" class="guests__img">
+
+            </section>
+        </article>
+
+        <article class="topics" id="topics">
+            <h2 class="topics__title">Algunos de nuestros temas</h2>
+
+            <section class="topics__container">
+                <div class="topics__subcontainer">
+                    <img src="./assets/icon1.svg" alt="topic" class="topics__img">
+                    <h3 class="topics__subtitle">Trabajo remoto</h3>
+
+                </div>
+                <div class="topics__subcontainer">
+                    <img src="./assets/icon2.svg" alt="topic" class="topics__img">
+                    <h3 class="topics__subtitle">Repasando la programación</h3>
+
+                </div>
+                <div class="topics__subcontainer">
+                    <img src="./assets/icon3.svg" alt="topic" class="topics__img">
+                    <h3 class="topics__subtitle">Bases del código</h3>
+
+                </div>
+                <div class="topics__subcontainer">
+                    <img src="./assets/icon4.svg" alt="topic" class="topics__img">
+                    <h3 class="topics__subtitle">Seguridad informática</h3>
+
+                </div>
+            </section>
+
+        </article>
+
+        <article class="last-news" id="last-news">
+            <h2 class="last-news__title">
+                ¿Quieres las últimas novedades?
+            </h2>
+            <button type="button" class="a-last-news__button" id="listen-to">ESCUCHA LOS EPISODIOS</button>
+        </article>
+
+    </main>
+
+    <footer class="main-footer" id="main-footer">
+        <div class="copyright">
+            <p class="copyright__text">© 2019 - Hello blue pale dot</p>
+        </div>
+        <div class="social">
+            <a href="https://www.spotify.com" class="social__link" target="_blank"><i class="fab fa-spotify"></i></a>
+            <a href="https://www.twitter.com" class="social__link" target="_blank"> <i class="fab fa-twitter"></i></a>
+            <a href="https://www.facebook.com" class="social__link" target="_blank"> <i class="fab fa-facebook-square"></i></a>
+            <a href="https://www.instagram.com" class="social__link" target="_blank"> <i class="fab fa-instagram"></i></a>
+            <a href="https://www.telegram.com" class="social__link" target="_blank"> <i class="fab fa-telegram"></i></a>
+        </div>
+    </footer>
+</body>

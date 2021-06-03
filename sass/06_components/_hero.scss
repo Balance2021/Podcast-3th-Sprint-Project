@@ -1,0 +1,11 @@
+@use '../01_settings/variables' as var;
+@use '../02_tools/mixins' as mx;
+
+.hero {
+
+    @at-root {
+        .hero__text {
+            max-width: var.$text-container;
+        }
+    }
+}

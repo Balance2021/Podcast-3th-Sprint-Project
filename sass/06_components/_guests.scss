@@ -1,0 +1,8 @@
+@use '../01_settings/variables' as var;
+@use '../02_tools/mixins' as mx;
+
+.guest__container {
+    @include mx.g-container-responsive(repeat(auto-fill, minmax(320px, 426px)));
+    justify-content: center;
+    gap: 0;
+}

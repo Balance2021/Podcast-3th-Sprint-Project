@@ -1,0 +1,33 @@
+@use '../01_settings/variables'as var;
+
+%button {
+    background: var.$buttons;
+    padding: (var.$spacing / 2) (var.$spacing * 2);
+}
+
+.a-hero__button,
+.a-last-news__button {
+    @extend %button;
+
+    &:hover,
+    &:focus {
+        background: var.$hover-buttons;
+        color:#FFFFFF;
+    }
+}
+.a-hero__button,
+.a-last-news__button{
+    width:288px;
+    height: 48px;
+    text-align: center;
+}
+@media screen and (min-width:900px) {    
+    .a-hero__button{
+        width: 226px;
+        height: 56px;
+    }
+    .a-last-news__button{
+        width: 345px;
+        height: 56px;
+    }
+}

@@ -1,0 +1,18 @@
+@use '../01_settings/variables' as var;
+@use '../02_tools/mixins' as mx;
+
+.topics__container {
+    @include mx.g-container-responsive(repeat(auto-fill, minmax(100px, 240px)));
+    justify-content: center;
+    justify-items: center;
+
+    @at-root {
+        .topics__subcontainer {
+            @include mx.f-justify;
+            justify-content: start;
+            text-align: center;
+            flex-wrap: nowrap;
+            flex-direction: column;
+        }
+    }
+}

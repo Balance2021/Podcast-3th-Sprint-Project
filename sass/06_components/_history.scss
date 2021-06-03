@@ -1,0 +1,13 @@
+@use '../01_settings/variables' as var;
+@use '../02_tools/mixins' as mx;
+
+
+.history {
+    @include mx.g-container-responsive;
+    justify-content: space-evenly;
+
+    &__img {
+        margin-top: var.$negative-margin;
+        z-index: var.$z-front;
+    }
+}
